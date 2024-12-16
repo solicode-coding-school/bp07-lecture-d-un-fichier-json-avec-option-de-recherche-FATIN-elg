@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- titre -->
+  <title>Tableau des Employés</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- titre grand et la barre de recherche et filtrage -->
+  <div class="container">
+    <h1>Liste des Employés</h1>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Rechercher par nom, département ou ville..." />
+      <select id="filterDepartment">
+        <option value="">Tous les départements</option>
+        <option value="Finance">Finance</option>
+        <option value="RH">Ressources Humaines</option>
+        <option value="IT">IT</option>
+        <option value="Marketing">Marketing</option>
+        <option value="Logistique">Logistique</option>
+      </select>
+    </div>
+    <!-- message d'error -->
+    <div id="error-message"></div>
+    <!-- tableau d'affichage les employées -->
+    <table id="employeeTable">
+      <thead>
+        <tr>
+          <th>Nom</th>
+          <th>Département</th>
+          <th>Ville</th>
+          <th>Âge</th>
+          <th>Actif</th>
+          <th>Compétences</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Les données -->
+      </tbody>
+    </table>
+  </div>
+  <!-- change pages -->
+  <div class="pagination">
+    <button id="prev-page" onclick="changePage(-1)">Précédent</button>
+    <button id="next-page" onclick="changePage(1)">Suivant</button>
+  </div>
+  
+  <div class="rows-per-page">
+    <label for="rowsPerPage">Lignes par page :</label>
+    <select id="rowsPerPage">
+      <option value="all">Tout afficher</option>
+      <option value="15">15 lignes</option>
+      <option value="10">10 lignes</option>
+      <option value="5">5 lignes</option>
+    </select>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
